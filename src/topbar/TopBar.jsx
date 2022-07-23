@@ -11,7 +11,6 @@ export default function TopBar() {
             <i className="topIcon fa-brands fa-twitter-square"></i>
             <i className="topIcon fa-brands fa-pinterest-square"></i>
             <i className="topIcon fa-brands fa-instagram-square"></i>
-            
             </div>
             <div className="topCenter">
                 <ul className="topList">
@@ -25,7 +24,7 @@ export default function TopBar() {
             <div className="topRight">
                 <img 
                     className="topImg"
-                    src="./img/books.jpg"
+                    src="https://images.pexels.com/photos/298660/pexels-photo-298660.jpeg?cs=srgb&dl=pexels-lumn-298660.jpg&fm=jpg"
                     alt="" 
                 />
                 <i className="topSearchIcon fa-solid fa-search"></i>

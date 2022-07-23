@@ -10,7 +10,7 @@ function Header() {
             <span className="headerTitleLg">Blog</span>
           </div>
         </div>
-        <img className="headerImg" src="https://www.pexels.com/photo/brown-wooden-shelf-and-beige-fabric-sofa-1125130/" alt="" />
+        <img className="headerImg" src="https://images.pexels.com/photos/298660/pexels-photo-298660.jpeg?cs=srgb&dl=pexels-lumn-298660.jpg&fm=jpg" alt="" />
     </>
   );
 }
