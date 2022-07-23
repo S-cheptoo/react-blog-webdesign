@@ -6,7 +6,7 @@ function Sidebar() {
     <div className="sidebar">
         <div className="sidebarItem">
           <span className="sidebarTitle">ABOUT ME</span>
-          <img src="https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?cs=srgb&dl=pexels-pixabay-265004.jpg&fm=jpg" alt=""/>
+          <img className="sidebarImg"src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?cs=srgb&dl=pexels-chevanon-photography-302899.jpg&fm=jpg" alt=""/>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
         <div className="sidebarItem">
