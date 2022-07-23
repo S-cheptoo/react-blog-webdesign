@@ -20,6 +20,9 @@ function Post() {
             <hr />
             <span className="postDate">1 hour ago</span>
         </div>
+        <p className="postDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+         Veritatis deserunt voluptas natus asperiores, tempora nemo eveniet, sequi quia ex ducimus aliquam recusandae doloribus blanditiis eaque a? 
+         Nesciunt iste illo dolores?</p>
     </div>
   )
 }
