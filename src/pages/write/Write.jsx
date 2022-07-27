@@ -4,6 +4,10 @@ import "./write.css";
 function Write() {
   return (
     <div className="write">
+        <img 
+        className="writeImg"
+        src="https://images.pexels.com/photos/9897446/pexels-photo-9897446.jpeg?cs=srgb&dl=pexels-regina-pivetta-9897446.jpg&fm=jpg" 
+        alt="" />
         <form className="writeForm">
             <div className="writeFormGroup">
                 <label htmlFor="fileInput">
