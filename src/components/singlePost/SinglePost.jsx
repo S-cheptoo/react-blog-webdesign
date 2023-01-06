@@ -1,7 +1,9 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import "./singlepost.css";
 
 function SinglePost() {
+    const location =useLocation()
   return (
     <div className="singlepost">
         <div className="singlePostWrapper">
