@@ -1,17 +1,31 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { useState, useEffect, useLocation } from 'react';
 import "./singlepost.css";
+import axios from "axios";
+import {Link} from "react-router-dom"
 
 function SinglePost() {
-    const location =useLocation()
+    const location =useLocation();
+    const path = location.pathname.split("/")([2]);
+
+    const [post, setPost] = useState({})
+
+    useEffect(()=>{
+        const getPost = async ()=>{
+            const res = await axios.get("/posts/" + path);
+            setPost(res.data);
+        };
+    },[path])
   return (
     <div className="singlepost">
         <div className="singlePostWrapper">
-            <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?cs=srgb&dl=pexels-chevanon-photography-302899.jpg&fm=jpg"
-            alt="" 
-            className="singlePostImg" 
-            />
-            <h1 className="singlePostTitle">Lorem ipsum dolor.
+            {post.photo && (
+                <img src={post.photo}
+                alt="" 
+                className="singlePostImg" 
+                />
+            )}
+            <h1 className="singlePostTitle">
+                {post.title}
                 <div className="singlePostEdit">
                     <i className="singlePostIcon far fa-edit"></i>
                     <i className="singlePostIcon far fa-trash-alt"></i>
@@ -19,27 +33,17 @@ function SinglePost() {
             </h1>
             <div className="singlePostInfo">
                 <span className="singlePostAuth">
-                    Author: <b>Sandra</b>
+                    Author: 
+                    <Link to={`/?user=${post.username}`} className="link">
+                    <b>{post.username}</b>
+                    </Link>
                 </span>
                 <span className="singlePostDate">
-                    1 hour ago
+                {new Date(post.username).toDateString}
                 </span>
             </div>
-            <p className="singlePostDesc">Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Saepe, officiis at debitis repudiandae sint dolorum aliquid, culpa esse minus exercitationem minima totam quisquam
-                    deserunt a cum mollitia omnis expedita nam?
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Saepe, officiis at debitis repudiandae sint dolorum aliquid, culpa esse minus exercitationem minima totam quisquam
-                    deserunt a cum mollitia omnis expedita nam?
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Saepe, officiis at debitis repudiandae sint dolorum aliquid, culpa esse minus exercitationem minima totam quisquam
-                    deserunt a cum mollitia omnis expedita nam?
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Saepe, officiis at debitis repudiandae sint dolorum aliquid, culpa esse minus exercitationem minima totam quisquam
-                    deserunt a cum mollitia omnis expedita nam?
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Saepe, officiis at debitis repudiandae sint dolorum aliquid, culpa esse minus exercitationem minima totam quisquam
-                    deserunt a cum mollitia omnis expedita nam?
+            <p className="singlePostDesc">
+                {post.desc}
             </p>
         </div>
     </div>

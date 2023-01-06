@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./post.css";
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 
 function Post({post}) {
   return (
