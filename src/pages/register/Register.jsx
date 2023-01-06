@@ -1,10 +1,12 @@
 import React from 'react'
 import "./register.css";
-import {
-  Link
-} from "react-router-dom";
+import { useState } from 'react';
+import {Link} from "react-router-dom";
 
 function Register() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="register">
         <span className="registerTitle">Register</span>
